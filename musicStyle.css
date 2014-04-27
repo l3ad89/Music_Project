@@ -1,0 +1,42 @@
+.ui-icon-play
+{ 
+    background: url(res/images/png/play.png) 53% 50% no-repeat; 
+    background-size: 24px 22px;  
+    
+}  
+
+.ui-icon-ffw{
+    background: url(res/images/png/fast-forward.png) 53% 50% no-repeat; 
+    background-size: 24px 22px; 
+}
+
+.ui-icon-rrw{
+    background: url(res/images/png/fast-backward.png) 53% 50% no-repeat; 
+    background-size: 24px 22px; 
+}
+
+#btnSearch{
+    
+    width:  40em;
+}
+
+#genreSelection{
+    
+    width:  40em;
+}
+
+#waveform{
+     height: 100px;
+     background-color:  #0094ff;
+ }
+
+#artworkDisplayPane{
+    
+    width: 300px;
+    height: 300px;    
+}
+
+#albumCover{
+    width: 100%;
+    height:  100%;
+}

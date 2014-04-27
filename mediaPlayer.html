@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <link rel="stylesheet" href="musicStyle.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <script src="musicPlayer.js"></script>
+        <script src="res/soundmanager/soundmanager/script/soundmanager2.js"></script>
+        <script>
+            soundManager.setup({
+                url: 'res/soundmanager/soundmanager/swf/',
+                flashVersion: 9, // optional: shiny features (default = 8)
+                // optional: ignore Flash where possible, use 100% HTML5 mode
+                // preferFlash: false,
+                onready: function () {
+                    // Ready to use; soundManager.createSound() etc. can now be called.
+                    
+                }
+            });
+        </script>
+        <script src="//connect.soundcloud.com/sdk.js"></script>
+        <script src="mediaPlayer.js"></script>
+        <script>
+          SC.initialize({
+            client_id: "a4d5a89f85e37bf034f2732fb6964fc4"            
+          });
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="mediaPlayer" data-theme="b">
+            <div data-role="header">
+                <a href="index.html" id="btnBack" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all "></a>
+                <h1>Media Player</h1>                   
+            </div>   
+            
+            <div data-role="main" class="ui-content">   
+                <center>
+                    <div id="artworkDisplayPane">
+                        <img id="albumCover" src="" />                    
+                    </div>
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <button id="btnRRW" data-theme="b" data-icon="rrw" data-iconpos="notext" class="ui-nodisc-icon">RRW</button> 
+                        <button id="btnPause" data-theme="b" data-icon="play" data-iconpos="notext" class="ui-nodisc-icon">Pause</button>
+                        <button id="btnFFW" data-theme="b" data-icon="ffw" data-iconpos="notext" class="ui-nodisc-icon">FFW</button> 
+                    </div>
+                </center>             
+                    
+            </div> 
+            
+        </div>  
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <link rel="stylesheet" href="musicStyle.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <script src="musicPlayer.js"></script>
+        <script src="res/soundmanager/soundmanager/script/soundmanager2.js"></script>
+        <script>
+            soundManager.setup({
+                url: 'res/soundmanager/soundmanager/swf/',
+                flashVersion: 9, // optional: shiny features (default = 8)
+                // optional: ignore Flash where possible, use 100% HTML5 mode
+                // preferFlash: false,
+                onready: function () {
+                    // Ready to use; soundManager.createSound() etc. can now be called.
+                    
+                }
+            });
+        </script>
+        <script src="//connect.soundcloud.com/sdk.js"></script>        
+        <script>
+          SC.initialize({
+            client_id: "a4d5a89f85e37bf034f2732fb6964fc4"            
+          });
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Music Project</h1>
+                <a href="mediaplayer.html" class="ui-btn">Page2</a>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <div id="container" class="ui-field-contain"> 
+                    <center>                
+                        <fieldset id="genreSelection" data-role="controlgroup" data-mini="true" data-theme="b">
+                            <legend id="genreLegend"><b>Choose a Genre</b>: </legend>
+                            <input type="radio" name="radio-choice" id="rbPop" value="pop" />
+                            <label for="rbPop">Pop</label>
+                            <input type="radio" name="radio-choice" id="rbRock" value="rock" checked="checked"/>
+                            <label for="rbRock">Rock</label>
+                            <input type="radio" name="radio-choice" id="rbMetal" value="metal" />
+                            <label for="rbMetal">Metal</label>
+                            <input type="radio" name="radio-choice" id="rbCountry" value="country" />
+                            <label for="rbCountry">Country</label>         
+                        </fieldset>  
+                        <a href="#songList" class="ui-btn" id="btnSearch">Search</a>                
+                    </div>
+                
+                    
+                </center>
+               <div id="divSongs">
+                   <ul id="songInfo" data-role="listview" data-inset="true">
+                   </ul>
+               </div>
+            </div>     
+        </div>
+       
+
+
+    </body>
+</html>
